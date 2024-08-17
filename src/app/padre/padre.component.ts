@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
 })
 export class PadreComponent {
 
+  mensajeRecibido?: string 
+
+  recibirMensaje($event:string){
+    this.mensajeRecibido = $event
+  }
+
   valorContador: number = 0;
-  mensajePadre = 'mensaje desde padre';
+ 
 
   incrementar(){
     this.valorContador++
